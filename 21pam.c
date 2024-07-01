@@ -134,9 +134,10 @@
 		return rval;
 	}
 
-	if (strcmp("root",username) == 0){
+	//Tire o comentário para que o Root não tenha que passar pelo PAM (NOS DOIS ARQUIVOS)
+	/*if (strcmp("root",username) == 0){
 		return PAM_SUCCESS;
-	}
+	}*/
 
 	return jogar();
 		

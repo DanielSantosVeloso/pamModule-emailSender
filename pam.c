@@ -188,9 +188,10 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
 		return rval;
 	}
 	
-	if (strcmp("root",username) == 0){
+	//Tire o comentário para que o Root não tenha que passar pelo PAM (NOS DOIS ARQUIVOS)
+	/*if (strcmp("root",username) == 0){
 		return PAM_SUCCESS;
-	}
+	}*/
 
 	codigoRandomizador();
 	digiteEmail();
